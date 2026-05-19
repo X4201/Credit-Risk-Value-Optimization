@@ -216,3 +216,45 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# =========================================================================
+# Custom Additions for Banking Credit Risk Portfolio Project
+# =========================================================================
+
+# --- 1. Cloud & AWS Security Credentials ---
+# Never let local AWS keys or profiles leak into GitHub
+.aws/
+.config/
+credentials.ini
+config.json
+secret_keys.txt
+*.pem
+
+# --- 2. Heavy Data & Storage Files (Prevent Bloat) ---
+# Prevents raw/mock transaction and customer files from being uploaded
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.sql.bak
+*.dump
+
+# Project data directory folders (if you store them locally before S3 upload)
+data/
+mock_data/
+
+# EXCEPTION: Allow Git to track your tiny sample metadata file 
+# so interviewers can see your table structure.
+!sample_data.csv
+
+# --- 3. Power BI & Local Desktop System Artifacts ---
+# Ignore Power BI recovery and temporary lock files
+*.tmp
+*.pbit
+*.pbix.lk
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
